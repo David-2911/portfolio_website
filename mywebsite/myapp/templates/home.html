@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}{% load static %} {% block title %} David - Software
+Engineer {%endblock%} {% block content %}
+<section id="welcome-section">
+  <div id="hero">
+    <div id="content">
+      <h1>Hello, I'm David Akande.</h1>
+      <h3>Software Engineer.</h3>
+      <h3>Prospective AI/ML Engineer.</h3>
+      <p>Join me on my journey to self-discovery and innovation!</p>
+    </div>
+    <div id="template">
+      <img
+        src="{% static 'images/abstract.png' %}"
+        alt="illustration"
+        id="template1"
+      />
+    </div>
+  </div>
+  <div id="profiles">
+    <a href="https://www.linkedin.com/in/david2911"
+      ><img
+        src="{% static 'images/linkedin.svg' %}"
+        target="_blank"
+        id="profile-link"
+        alt="LinkedIn"
+    /></a>
+    <a
+      href="https://www.freecodecamp.org/fcc856299a8-988d-43da-806f-aea215cd5b8b"
+      ><img
+        src="{% static 'images/freecodecamp.svg' %}"
+        target="_blank"
+        id="profile-link1"
+        alt="freeCodeCamp"
+    /></a>
+    <a href="https://github.com/David-2911"
+      ><img
+        src="{% static 'images/github.svg' %}"
+        target="_blank"
+        id="profile-link2"
+        alt="GitHub"
+    /></a>
+  </div>
+</section>
+{% endblock %}

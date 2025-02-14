@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <script>
+      // Apply dark mode instantly to prevent flickering
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark-theme");
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %} David - Software Engineer | Portfolio {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Navbar-->
+    <header id="header">
+      <h1>David.</h1>
+      <nav id="navbar">
+        <ul id="menuList">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Me</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'skills' %}">Skills</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{% url 'contact' %}">Contact Me</a></li>
+        </ul>
+      </nav>
+      <div id="end">
+        <div id="toggle">
+          <img
+            id="moon"
+            src="{% static 'images/moon.svg' %}"
+            data-moon="{% static 'images/moon.svg' %}"
+            data-sun="{% static 'images/sun.svg' %}"
+            alt="Theme Toggle"
+          />
+        </div>
+        <div id="sidebar">
+          <img
+            src="{% static 'images/menu.svg' %}"
+            alt="Close"
+            id="close"
+            onclick="togglemenu()"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <p>&copy; 2024 David Akande. All rights reserved.</p>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
