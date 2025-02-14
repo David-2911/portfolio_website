@@ -40,7 +40,7 @@ SECRET_KEY = "django-insecure-8pfhv9g(^7omlp2(^lmk*p8fnhxb)%@&2cu1*#(q!k4fr3+z&o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://portfolio-website-itau.onrender.com", "localhost"]
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
 
 
 # Application definition
