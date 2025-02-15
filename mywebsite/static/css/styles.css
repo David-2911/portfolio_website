@@ -267,7 +267,7 @@ header h1::after {
   flex: 1;
   max-width: 1000px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 0 200px 0;
   padding: 40px;
   background-color: var(--color-design1);
   color: var(--color-text2);
@@ -315,7 +315,7 @@ header h1::after {
   width: 70vw;
   max-height: auto;
   padding: 20px 20px;
-  margin: 0 auto; /* Centers the section horizontally */
+  margin: 60px 0 100px 0;
 }
 
 .skills-grid {
@@ -577,29 +577,11 @@ footer p {
   }
 
   #projects {
-    margin: 10rem 0;
-    height: auto;
-    padding: 2rem;
+    margin: 15rem 0 0 0;
   }
 
   #projects h2 {
     font-size: 1.5rem;
-  }
-
-  #projects .project-tile {
-    width: 45%;
-  }
-
-  #projects .project-tile h3 {
-    font-size: 1rem;
-  }
-
-  #projects .project-tile p {
-    font-size: 0.8rem;
-  }
-
-  #projects .project-tile a {
-    font-size: 0.8rem;
   }
 
   .about-me {
@@ -617,11 +599,6 @@ footer p {
 
   #about p {
     font-size: 0.8rem;
-  }
-
-  #about #bio img {
-    width: 8rem;
-    height: 8rem;
   }
 
   #skills {
